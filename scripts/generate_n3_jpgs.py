@@ -4,7 +4,7 @@ import textwrap
 R=Path(__file__).parents[1]; O=R/'slides'; A=R/'assets'; O.mkdir(exist_ok=True)
 F='/Windows/Fonts/arial.ttf'; B='/Windows/Fonts/arialbd.ttf'; font=lambda n,b=False:ImageFont.truetype(B if b else F,n)
 S=[
-('CAPA','Deepfake em publicidade',['Maratona Tech 2026 · Nível 3','Caso brasileiro: uso não autorizado de imagem e voz sintética atribuído a Marcos Palmeira.'],'template-capa-002.png'),
+('CAPA','Deepfake em publicidade',['Maratona Tech 2026 · Nível 3','Caso brasileiro: uso não autorizado de imagem e voz sintética atribuído a Marcos Palmeira.'],'template-icones-ilustracoes-007.png'),
 ('PROBLEMA DIGITAL','Qual é o problema?',['Publicidade digital pode simular o endosso de uma pessoa real usando IA.','O caso circulou no Instagram e promovia um kit de ferramentas.','Relevância: imagem, voz, confiança e possível pagamento são envolvidos.'],'template-icones-ilustracoes-029.png'),
 ('ARTEFATO DIGITAL','O conteúdo analisado',['Reconstituição esquemática baseada na reportagem: vídeo com imagem prévia do ator + voz sintética + oferta comercial.','A reportagem da CNN Brasil é a evidência disponível; o arquivo original do anúncio não foi recuperado.','Não é possível afirmar hash, metadados, autoria ou perícia quadro a quadro.'],'visual-deepfake-cc-by-sa-2.0.jpg'),
 ('PERFIL PROFISSIONAL','Quem pode ajudar?',['Jornalista de verificação e pesquisador de segurança digital: localizam a origem, comparam fontes, preservam evidências e explicam limites.','A atuação combina comunicação, pensamento computacional, proteção de dados e responsabilidade pública.'],'template-icones-ilustracoes-007.png'),
