@@ -13,6 +13,8 @@ Até a revisão de 17 set. 2026, não foi encontrada fotografia ou gravação do
 
 - **Wikimedia Commons — Deepfake.jpg:** ilustração conceitual licenciada em Creative Commons Attribution-ShareAlike 2.0. Pode ser reutilizada com atribuição e compartilhamento pela mesma licença. Uso no projeto: explicar a técnica, nunca representar o anúncio real ou atribuir a imagem a Marcos Palmeira. <https://commons.wikimedia.org/wiki/File:Deepfake.jpg>
 
+O arquivo local `assets/visual-deepfake-cc-by-sa-2.0.jpg` é uma cópia dessa obra licenciada. Crédito aplicado nos slides: “Ministerie van Buitenlandse Zaken, Deepfake.jpg, CC BY-SA 2.0, via Wikimedia Commons; adaptação de layout pelo projeto”.
+
 ## Regra de apresentação
 
 O slide deve rotular cada visual como `FOTO DA REPORTAGEM`, `ILUSTRAÇÃO LICENCIADA`, `DIAGRAMA AUTORAL` ou `EVIDÊNCIA NÃO RECUPERADA`. A fonte deve aparecer junto ao visual. Não se deve apresentar uma ilustração genérica como captura do golpe nem uma fotografia jornalística como prova de autoria.
