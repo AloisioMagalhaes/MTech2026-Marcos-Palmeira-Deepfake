@@ -15,6 +15,7 @@ Projeto-exemplo para o Ensino Médio (Nível 3), separado por documentação e c
 - `index.html` — apresentação HTML5 responsiva e acessível.
 - `assets/` — imagens/ícones extraídos dos materiais originais; não são evidência do caso e aparecem identificados como ilustração.
 - `privacidade.html` e `docs/lgpd-compliance.md` — aviso público e documentação de conformidade LGPD.
+- `docs/lgpd-validation-2026-09-17.md` — relatório da revisão técnica do repositório.
 
 ## Evidência e limites
 
