@@ -32,7 +32,7 @@ def diagram(d, i):
 
 for i,(k,t,ps,img) in enumerate(S,1):
  bg=Image.open(A/'template-capa-002.png').convert('RGB').resize((1920,1080))
- im=bg.copy(); d=ImageDraw.Draw(im); d.rectangle((0,0,1920,18),fill=(47,128,237)); d.rectangle((0,1062,1920,1080),fill=(246,195,68)); d.rounded_rectangle((680,110,1850,1000),radius=28,fill=(247,251,255,238)); d.rounded_rectangle((70,220,650,850),radius=32,fill=(255,255,255),outline=(199,215,229),width=5); d.rounded_rectangle((82,232,638,838),radius=26,outline=(246,195,68),width=3); a=Image.open(A/img).convert('RGBA'); a.thumbnail((500,500)); im.paste(a,(110,280),a); d.text((740,170),k,font=font(28,1),fill=(47,128,237)); d.text((740,225),t,font=font(58,1),fill=(16,42,67)); y=350
+ im=bg.copy(); d=ImageDraw.Draw(im); d.rectangle((0,0,1920,18),fill=(47,128,237)); d.rectangle((0,1062,1920,1080),fill=(246,195,68)); d.rounded_rectangle((680,110,1850,1000),radius=28,fill=(247,251,255,238)); d.rounded_rectangle((70,220,650,850),radius=32,fill=(255,255,255),outline=(199,215,229),width=5); d.rounded_rectangle((82,232,638,838),radius=26,outline=(246,195,68),width=3); a=Image.open(A/img).convert('RGBA'); a.thumbnail((520,560)); ax=360-a.width//2; ay=535-a.height//2; im.paste(a,(ax,ay),a); d.text((740,170),k,font=font(28,1),fill=(47,128,237)); d.text((740,225),t,font=font(58,1),fill=(16,42,67)); y=350
  for p in ps:
   for line in textwrap.wrap(p,52):d.text((740,y),line,font=font(29),fill=(16,42,67));y+=43
   y+=20
