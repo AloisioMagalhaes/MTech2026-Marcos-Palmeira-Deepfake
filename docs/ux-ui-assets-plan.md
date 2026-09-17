@@ -33,7 +33,7 @@ O PPTX original contém 117 arquivos de mídia incorporados. Eles foram extraíd
 | Recomendações | `template-icones-ilustracoes-040.png` | checklist de ação |
 | Público | `template-icones-ilustracoes-100.png` | rede/comunidade |
 | Referências | `template-icones-ilustracoes-107.png` | bibliografia |
-| Conclusão | `template-icones-ilustracoes-075.png` | síntese científica/aprendizado |
+| Conclusão | `template-icones-ilustracoes-007.png` | personagem apresentando os aprendizados |
 
 ## Validação
 
