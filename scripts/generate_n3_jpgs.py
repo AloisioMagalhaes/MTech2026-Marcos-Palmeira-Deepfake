@@ -23,9 +23,32 @@ def diagram(d, i):
     # Diagramas autorais: visualizam relações documentadas sem reproduzir mídia jornalística protegida.
     groups={2:['IMAGEM/VOZ','OFERTA','USUÁRIO'],3:['VÍDEO PRÉVIO','VOZ SINTÉTICA','ANÚNCIO'],5:['RELATO','CIRCULAÇÃO','IMPACTO'],6:['IA','IDENTIDADE','INCENTIVO'],7:['CONTEÚDO','CONFIANÇA','DANO'],8:['CONCEITO','EVIDÊNCIA','LIMITE'],9:['PAUSAR','CONFIRMAR','DENUNCIAR']}
     labels=groups.get(i)
+    if i==3:
+        # UML 2.x — diagrama de atividades da cadeia investigada.
+        nodes=[('INÍCIO','material anterior'),('AÇÃO','voz sintética'),('OBJETO','oferta comercial'),('DECISÃO','confirmar fonte')]
+        x=760
+        for n,(kind,label) in enumerate(nodes):
+            y=805+n*43
+            if kind=='DECISÃO': d.polygon([(x,y+18),(x+18,y),(x+36,y+18),(x+18,y+36)],fill=(246,195,68),outline=(16,42,67))
+            else: d.rounded_rectangle((x,y,x+235,y+36),radius=12,fill=(16,42,67),outline=(246,195,68),width=2)
+            d.text((x+48,y+8),label,font=font(18,1),fill=(255,255,255))
+            if n<3:d.line((x+18,y+36,x+18,y+43),fill=(246,195,68),width=3)
+        return
     if i==4:
+        # Tabela de decisão: não transforma indício em prova.
+        d.text((760,800),'MATRIZ DE RECONHECIMENTO',font=font(22,1),fill=(16,42,67))
+        rows=[('Sinal','Interpretação'),('Imagem + voz','confirmar origem'),('Oferta + urgência','não pagar'),('Arquivo ausente','limite da análise')]
+        for r,(a,b) in enumerate(rows):
+            y=830+r*38; fill=(16,42,67) if r else (47,128,237); d.rectangle((760,y,1800,y+34),fill=fill,outline=(246,195,68),width=2); d.text((780,y+7),a,font=font(17,1),fill=(255,255,255)); d.text((1150,y+7),b,font=font(17),fill=(255,255,255))
+        return
+    if i==7:
+        d.text((760,802),'MATRIZ QUALITATIVA DE RISCOS',font=font(21,1),fill=(16,42,67))
+        for x,label in [(760,'INFORMAÇÃO'),(1110,'ECONÔMICO'),(1460,'CONFIANÇA')]:
+            d.rounded_rectangle((x,840,x+290,900),radius=14,fill=(16,42,67),outline=(246,195,68),width=3); d.text((x+18,860),label,font=font(18,1),fill=(255,255,255))
+        return
+    if i==8:
         d.line((760,855,1740,855),fill=(16,42,67),width=6)
-        for x,label in [(800,'ORIGEM'),(1120,'EDIÇÃO'),(1450,'CIRCULAÇÃO'),(1700,'CHECAGEM')]:
+        for x,label in [(800,'CONCEITO'),(1120,'EVIDÊNCIA'),(1450,'LIMITE')]:
             d.ellipse((x-18,837,x+18,873),fill=(246,195,68),outline=(16,42,67),width=3); d.text((x-55,885),label,font=font(20,1),fill=(16,42,67))
         return
     if i==10:
