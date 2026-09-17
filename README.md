@@ -16,6 +16,7 @@ Projeto-exemplo para o Ensino Médio (Nível 3), separado por documentação e c
 - `assets/` — imagens/ícones extraídos dos materiais originais; não são evidência do caso e aparecem identificados como ilustração.
 - `privacidade.html` e `docs/lgpd-compliance.md` — aviso público e documentação de conformidade LGPD.
 - `docs/lgpd-validation-2026-09-17.md` — relatório da revisão técnica do repositório.
+- `docs/ux-ui-assets-plan.md` — prompt revisado, regras UX/UI e matriz de encaixe dos assets.
 
 ## Evidência e limites
 
