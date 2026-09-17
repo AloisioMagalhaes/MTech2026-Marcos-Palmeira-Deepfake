@@ -14,6 +14,7 @@ Projeto-exemplo para o Ensino Médio (Nível 3), separado por documentação e c
 - `issues/` — backlog executável, convertido também em issues do GitHub.
 - `index.html` — apresentação HTML5 responsiva e acessível.
 - `assets/` — imagens/ícones extraídos dos materiais originais; não são evidência do caso e aparecem identificados como ilustração.
+- `privacidade.html` e `docs/lgpd-compliance.md` — aviso público e documentação de conformidade LGPD.
 
 ## Evidência e limites
 
