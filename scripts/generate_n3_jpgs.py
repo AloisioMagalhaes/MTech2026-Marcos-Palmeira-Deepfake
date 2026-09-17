@@ -47,12 +47,12 @@ def diagram(d, i):
 
 for i,(k,t,ps,img) in enumerate(S,1):
  bg=Image.open(A/'template-capa-002.png').convert('RGB').resize((1920,1080))
- im=bg.copy(); d=ImageDraw.Draw(im); d.rectangle((0,0,1920,18),fill=(47,128,237)); d.rectangle((0,1062,1920,1080),fill=(246,195,68)); d.rounded_rectangle((680,110,1850,1000),radius=28,fill=(247,251,255,238)); d.rounded_rectangle((70,220,650,850),radius=32,fill=(255,255,255),outline=(199,215,229),width=5); d.rounded_rectangle((82,232,638,838),radius=26,outline=(246,195,68),width=3); a=Image.open(A/img).convert('RGBA'); a.thumbnail((520,560)); ax=360-a.width//2; ay=535-a.height//2; im.paste(a,(ax,ay),a); d.text((740,170),k,font=font(28,1),fill=(47,128,237)); d.text((740,225),t,font=font(58,1),fill=(16,42,67)); y=350
+ im=bg.copy(); d=ImageDraw.Draw(im); d.rectangle((0,0,1920,18),fill=(47,128,237)); d.rectangle((0,1062,1920,1080),fill=(246,195,68)); d.rounded_rectangle((680,110,1850,1000),radius=28,fill=(247,251,255,238)); d.rounded_rectangle((70,220,650,850),radius=32,fill=(255,255,255),outline=(199,215,229),width=5); d.rounded_rectangle((82,232,638,838),radius=26,outline=(246,195,68),width=3); a=Image.open(A/img).convert('RGBA'); a.thumbnail((520,560)); ax=360-a.width//2; ay=535-a.height//2; im.paste(a,(ax,ay),a); d.text((740,170),k,font=font(28,1),fill=(47,128,237)); title_size=58 if len(t)<=34 else 50 if len(t)<=44 else 44; d.text((740,225),t,font=font(title_size,1),fill=(16,42,67)); y=225+title_size+55
  for n,p in enumerate(ps,1):
-  lines=textwrap.wrap(p,58); h=max(82,48*len(lines)+24)
+  lines=textwrap.wrap(p,58); body_size=25 if len(p)<105 else 22; line_h=38 if body_size==25 else 34; h=max(82,line_h*len(lines)+24)
   d.rounded_rectangle((735,y,1805,y+h),radius=16,fill=(16,42,67),outline=(246,195,68),width=2)
   d.ellipse((755,y+18,795,y+58),fill=(246,195,68)); d.text((768,y+22),str(n),font=font(18,1),fill=(16,42,67))
-  for j,line in enumerate(lines):d.text((820,y+17+j*40),line,font=font(25),fill=(255,255,255))
+  for j,line in enumerate(lines):d.text((820,y+17+j*line_h),line,font=font(body_size),fill=(255,255,255))
   y+=h+18
  diagram(d,i)
  if img.startswith('visual-'): d.text((110,790),'ILUSTRAÇÃO CC BY-SA 2.0 · MINISTERIE VAN BUITENLANDSE ZAKEN',font=font(13,1),fill=(16,42,67))
