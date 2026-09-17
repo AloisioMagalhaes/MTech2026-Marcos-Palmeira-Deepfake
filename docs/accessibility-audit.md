@@ -13,4 +13,12 @@ Validação realizada em 17 set. 2026, com referência às WCAG 2.2.
 | Movimento | Respeita `prefers-reduced-motion` |
 | Impressão | Um slide por página em formato 16:9 |
 
+## Revisão WCAG do HTML
+
+- Identidade visual: fundo azul-claro, superfícies quase brancas, texto azul-marinho e links azul-escuro.
+- Contraste-alvo: texto normal mínimo de 4,5:1; texto grande mínimo de 3:1; o amarelo não é usado como cor única para texto.
+- Foco: contorno escuro de 4 px com deslocamento de 4 px, visível também em navegação por teclado.
+- Responsividade: `clamp()` para tipografia e espaçamentos, flexbox na pilha de slides e quebra para viewport móvel.
+- Preferências: suporte a `prefers-reduced-motion` e `prefers-contrast: more`.
+
 O texto principal usa cor #102A43 sobre #F7FBFF. Os JPGs continuam sendo imagens; os atributos `alt` oferecem uma descrição resumida para leitores de tela, enquanto o conteúdo detalhado permanece visualmente dentro dos próprios slides.

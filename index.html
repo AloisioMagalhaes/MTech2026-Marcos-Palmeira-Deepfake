@@ -7,6 +7,19 @@
 <style>
 :root{--bg:#dfeaf4;--ink:#102a43;--focus:#f6c344}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,Arial,sans-serif}.skip{position:fixed;left:.75rem;top:.75rem;z-index:2;padding:.7rem 1rem;background:#fff;color:var(--ink);font-weight:700;transform:translateY(-150%)}.skip:focus{transform:none}.deck{display:flex;flex-direction:column;align-items:center;gap:2rem;padding:2rem 1rem}.slide{width:min(100%,1200px);aspect-ratio:16/9;object-fit:contain;display:block;background:#fff;border-radius:8px;box-shadow:0 10px 30px #102a4330}.slide:focus-visible{outline:4px solid var(--focus);outline-offset:6px}.index{position:fixed;right:1rem;bottom:1rem;z-index:2;display:flex;flex-wrap:wrap;gap:.25rem;max-width:18rem;justify-content:flex-end}.index a{display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:#fff;color:var(--ink);font-weight:700;text-decoration:none;border:2px solid var(--ink)}.index a:focus-visible{outline:4px solid var(--focus);outline-offset:3px}@media(max-width:700px){.deck{padding:.5rem;gap:1rem}.slide{border-radius:3px}.index{max-width:12rem;right:.5rem;bottom:.5rem}.index a{width:1.7rem;height:1.7rem;font-size:.8rem}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{.index,.skip{display:none}.deck{padding:0;gap:0}.slide{width:100%;border-radius:0;box-shadow:none;break-after:page}}
 </style>
+<style>
+:root{--theme-blue:#102a43;--theme-blue-2:#075985;--theme-surface:#f7fbff;--theme-focus:#7c4a03}
+body{background:#dfeaf4;color:var(--theme-blue);font-size:clamp(1rem,1.5vw,1.25rem)}
+.deck{gap:clamp(1rem,3vw,2rem);padding:clamp(1rem,3vw,2rem)}
+.slide{background:var(--theme-surface)}
+.slide:focus-visible,.index a:focus-visible,.privacy a:focus-visible,.sources a:focus-visible{outline:4px solid var(--theme-focus);outline-offset:4px}
+.index a{background:var(--theme-surface);color:var(--theme-blue);border-color:var(--theme-blue)}
+.sources,.privacy{width:min(100%,1200px);padding:1rem clamp(1rem,3vw,2rem);border:2px solid var(--theme-blue);border-radius:12px;background:var(--theme-surface);color:var(--theme-blue)}
+.sources{margin:0 auto 1rem}.sources h2{font-size:clamp(1.15rem,2vw,1.5rem);margin:.1rem 0 .4rem}.sources p{margin:.4rem 0}.sources a,.privacy a{color:var(--theme-blue-2);font-weight:700;text-decoration-thickness:.12em;text-underline-offset:.15em}
+.privacy{border-width:1px;text-align:center;font-size:clamp(.9rem,1.2vw,1rem)}
+@media(max-width:700px){.sources,.privacy{border-radius:8px;padding:.75rem;font-size:.95rem}.index{background:#dfeaf4cc;padding:.25rem;border-radius:8px}}
+@media(prefers-contrast:more){.slide{border:3px solid var(--theme-blue)}.sources,.privacy{border-width:3px}.sources a,.privacy a{text-decoration-thickness:.2em}}
+</style>
 </head>
 <body>
 <a class="skip" href="#slide-01">Ir para a apresentação</a>
