@@ -17,6 +17,7 @@ Projeto-exemplo para o Ensino Médio (Nível 3), separado por documentação e c
 - `privacidade.html` e `docs/lgpd-compliance.md` — aviso público e documentação de conformidade LGPD.
 - `docs/lgpd-validation-2026-09-17.md` — relatório da revisão técnica do repositório.
 - `docs/ux-ui-assets-plan.md` — prompt revisado, regras UX/UI e matriz de encaixe dos assets.
+- `docs/visual-graphs-plan.md` — prompt e matriz de gráficos/diagramas correlacionados por slide.
 
 ## Evidência e limites
 

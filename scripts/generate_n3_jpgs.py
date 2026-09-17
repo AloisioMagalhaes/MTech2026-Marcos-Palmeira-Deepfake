@@ -23,6 +23,21 @@ def diagram(d, i):
     # Diagramas autorais: visualizam relações documentadas sem reproduzir mídia jornalística protegida.
     groups={2:['IMAGEM/VOZ','OFERTA','USUÁRIO'],3:['VÍDEO PRÉVIO','VOZ SINTÉTICA','ANÚNCIO'],5:['RELATO','CIRCULAÇÃO','IMPACTO'],6:['IA','IDENTIDADE','INCENTIVO'],7:['CONTEÚDO','CONFIANÇA','DANO'],8:['CONCEITO','EVIDÊNCIA','LIMITE'],9:['PAUSAR','CONFIRMAR','DENUNCIAR']}
     labels=groups.get(i)
+    if i==4:
+        d.line((760,855,1740,855),fill=(16,42,67),width=6)
+        for x,label in [(800,'ORIGEM'),(1120,'EDIÇÃO'),(1450,'CIRCULAÇÃO'),(1700,'CHECAGEM')]:
+            d.ellipse((x-18,837,x+18,873),fill=(246,195,68),outline=(16,42,67),width=3); d.text((x-55,885),label,font=font(20,1),fill=(16,42,67))
+        return
+    if i==10:
+        for n,(label,sub) in enumerate([('PÚBLICO','estudantes'),('MENSAGEM','direta'),('CANAL','escola')]):
+            x=770+n*335; d.rounded_rectangle((x,815,x+260,900),radius=16,fill=(16,42,67),outline=(246,195,68),width=3); d.text((x+18,830),label,font=font(21,1),fill=(255,255,255)); d.text((x+18,865),sub,font=font(19),fill=(255,255,255))
+            if n<2:d.line((x+260,857,x+335,y if False else 857),fill=(246,195,68),width=5)
+        return
+    if i==12:
+        d.text((760,812),'IMPACTOS OBSERVADOS',font=font(24,1),fill=(16,42,67))
+        for n,(label,color) in enumerate([('ECONÔMICO',(220,90,70)),('INFORMACIONAL',(47,128,237)),('CONFIANÇA',(246,195,68))]):
+            x=770+n*330; d.rounded_rectangle((x,850,x+250,905),radius=14,fill=color,outline=(16,42,67),width=3); d.text((x+18,868),label,font=font(18,1),fill=(16,42,67) if n==2 else (255,255,255))
+        return
     if not labels:return
     for n,label in enumerate(labels):
         x=735+n*365; y=820
