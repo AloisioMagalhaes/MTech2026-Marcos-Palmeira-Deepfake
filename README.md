@@ -19,6 +19,7 @@ Projeto-exemplo para o Ensino Médio (Nível 3), separado por documentação e c
 - `docs/ux-ui-assets-plan.md` — prompt revisado, regras UX/UI e matriz de encaixe dos assets.
 - `docs/visual-graphs-plan.md` — prompt e matriz de gráficos/diagramas correlacionados por slide.
 - `docs/uml-graphs-accessibility.md` — escolha de UML, tabelas, matrizes e critérios de acessibilidade.
+- `docs/typography-consistency.md` — escala fixa e regras de legibilidade tipográfica.
 
 ## Evidência e limites
 
