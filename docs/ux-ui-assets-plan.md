@@ -37,3 +37,5 @@ O PPTX original contém 117 arquivos de mídia incorporados. Eles foram extraíd
 ## Validação
 
 A seleção deve ser revisada visualmente em 1920×1080, 1366×768 e viewport móvel. O contraste deve ser conferido entre texto, cartão e fundo; caso um ícone azul perca distinção, ele deve permanecer dentro do cartão branco e receber contorno amarelo, sem alterar a informação original.
+
+Fotografias jornalísticas permanecem como referência externa quando a licença não está documentada. O caso CNN Brasil contém fotografia creditada a Fábio Rocha/TV Globo e direitos reservados; portanto, foram priorizados diagramas autorais e link verificável à fonte.

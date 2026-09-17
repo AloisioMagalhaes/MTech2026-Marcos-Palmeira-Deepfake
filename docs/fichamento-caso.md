@@ -6,6 +6,8 @@
 
 **Ideia central:** a reportagem registra a alegação pública do ator de que um perfil usou vídeo prévio, imagem e voz reproduzida por IA para criar publicidade não autorizada de ferramentas. **Uso no projeto:** evidência jornalística de existência do caso e de não autorização; não prova, sozinha, autoria, alcance ou perícia do arquivo.
 
+**Evidência visual:** a matéria exibe fotografia creditada a Fábio Rocha/TV Globo e informa direitos reservados. Por isso, a apresentação mantém a referência e o crédito, mas não redistribui a fotografia no repositório sem autorização específica. Os diagramas dos slides são reconstruções autorais baseadas apenas nos fatos textualmente verificáveis.
+
 ## Referências científicas e técnicas
 
 1. KORSUNSKY, A. et al. Deepfakes and deception. *ACM Computing Surveys*, 2021.

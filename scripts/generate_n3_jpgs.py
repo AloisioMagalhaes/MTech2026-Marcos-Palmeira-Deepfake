@@ -19,11 +19,23 @@ S=[
 ('CAMPANHA · 4','Peça visual da campanha',['PARE · CONFIRME · DENUNCIE','1. Pause antes de clicar. 2. Confirme no canal oficial. 3. Não forneça dados. 4. Denuncie e preserve o link.','Peça de conscientização; não é anúncio real.'],'template-icones-ilustracoes-040.png'),
 ('CONCLUSÃO','Aprendizados principais',['Fato, evidência, inferência e hipótese precisam ser separados.','Imagem e voz podem ser reutilizadas para fabricar autoridade.','A resposta mais segura é confirmação independente antes de compartilhar ou pagar.'],'template-capa-002.png'),
 ('REFERÊNCIAS','Fontes utilizadas',['CNN BRASIL (2024). Marcos Palmeira: rosto do ator é usado com IA em golpe no Instagram.','MIRSKY; LEE (2021). The creation and detection of deepfakes. ACM Computing Surveys.','VACCARI; CHADWICK (2020). Deepfakes and disinformation. Social Media + Society.','BRASIL (2018). Lei Geral de Proteção de Dados. ANPD (2023). Guia orientativo. NIST (2023). AI Risk Management Framework.'],'template-icones-ilustracoes-107.png')]
+def diagram(d, i):
+    # Diagramas autorais: visualizam relações documentadas sem reproduzir mídia jornalística protegida.
+    groups={2:['IMAGEM/VOZ','OFERTA','USUÁRIO'],3:['VÍDEO PRÉVIO','VOZ SINTÉTICA','ANÚNCIO'],5:['RELATO','CIRCULAÇÃO','IMPACTO'],6:['IA','IDENTIDADE','INCENTIVO'],7:['CONTEÚDO','CONFIANÇA','DANO'],8:['CONCEITO','EVIDÊNCIA','LIMITE'],9:['PAUSAR','CONFIRMAR','DENUNCIAR']}
+    labels=groups.get(i)
+    if not labels:return
+    for n,label in enumerate(labels):
+        x=735+n*365; y=820
+        d.rounded_rectangle((x,y,x+315,y+70),radius=18,fill=(16,42,67),outline=(246,195,68),width=3)
+        d.text((x+18,y+20),label,font=font(24,1),fill=(255,255,255))
+        if n<2:d.line((x+315,y+35,x+365,y+35),fill=(246,195,68),width=5)
+
 for i,(k,t,ps,img) in enumerate(S,1):
  bg=Image.open(A/'template-capa-002.png').convert('RGB').resize((1920,1080))
  im=bg.copy(); d=ImageDraw.Draw(im); d.rectangle((0,0,1920,18),fill=(47,128,237)); d.rectangle((0,1062,1920,1080),fill=(246,195,68)); d.rounded_rectangle((680,110,1850,1000),radius=28,fill=(247,251,255,238)); d.rounded_rectangle((70,220,650,850),radius=32,fill=(255,255,255),outline=(199,215,229),width=5); d.rounded_rectangle((82,232,638,838),radius=26,outline=(246,195,68),width=3); a=Image.open(A/img).convert('RGBA'); a.thumbnail((500,500)); im.paste(a,(110,280),a); d.text((740,170),k,font=font(28,1),fill=(47,128,237)); d.text((740,225),t,font=font(58,1),fill=(16,42,67)); y=350
  for p in ps:
   for line in textwrap.wrap(p,52):d.text((740,y),line,font=font(29),fill=(16,42,67));y+=43
   y+=20
+ diagram(d,i)
  d.text((1800,1015),f'{i}/15',font=font(24,1),fill=(72,102,129));im.save(O/f'slide-{i:02d}.jpg',quality=94,optimize=True)
 
