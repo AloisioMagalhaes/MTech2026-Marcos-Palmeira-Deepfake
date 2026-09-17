@@ -2,7 +2,7 @@
 
 ## Escopo e responsabilidade
 
-Este projeto é um exemplo educacional estático sobre uso não autorizado de imagem e voz sintética em publicidade. A análise usa apenas o mínimo necessário de informação pública sobre o caso jornalístico e não substitui avaliação jurídica. A escola ou pessoa responsável deve preencher um canal de contato do controlador antes da publicação definitiva e validar a base legal aplicável.
+Este projeto é um exemplo educacional estático do CETI LUCAS MEIRELES ALVES sobre uso não autorizado de imagem e voz sintética em publicidade, vinculado à participação na Maratona Tech. A análise usa apenas o mínimo necessário de informação pública sobre o caso jornalístico e não substitui avaliação jurídica. O canal informado é aloísio.costa@professor.edu.pi.gov.br; a escola deve validar a base legal aplicável.
 
 ## Mapa de tratamento
 
@@ -19,13 +19,13 @@ O site não possui formulário, login, cookies próprios, analytics, pixels, arm
 
 O projeto aplica finalidade, adequação, necessidade, livre acesso, qualidade, transparência, segurança, prevenção, não discriminação e responsabilização. Não inclui dados sensíveis, crianças identificáveis, dados de saúde, religião, política ou sexualidade. A voz não é processada para identificação biométrica: é apenas objeto da discussão jornalística. A classificação de dado sensível depende da finalidade e do tratamento efetivo.
 
-Não foram inseridos nomes, fotos, vozes ou contatos de estudantes. Se estudantes forem incluídos em versão futura, deve-se avaliar o melhor interesse de crianças e adolescentes, a base legal, autorização institucional e medidas de proteção antes da publicação. O controlador deve oferecer canal para solicitações de acesso, correção, oposição, eliminação e esclarecimentos.
+Não foram inseridos nomes, fotos, vozes ou contatos de estudantes. Se estudantes forem incluídos em versão futura, deve-se avaliar o melhor interesse de crianças e adolescentes, a base legal, autorização institucional e medidas de proteção antes da publicação. O controlador informado é o CETI LUCAS MEIRELES ALVES; solicitações podem ser encaminhadas ao canal LGPD indicado no aviso público.
 
 Toda afirmação factual tem fonte registrada nos documentos do projeto. O anúncio original não é redistribuído como prova primária; qualquer captura deve ter crédito, URL e licença/justificativa de uso. As imagens do template são ilustrações, não comprovação forense. O projeto distingue fato, hipótese, ilustração e evidência.
 
 ## Checklist antes de publicar
 
-- [ ] preencher contato do controlador em `privacidade.html`;
+- [x] preencher contato do controlador em `privacidade.html`;
 - [ ] confirmar autorização/licença de cada imagem, vídeo e captura;
 - [ ] remover dados de estudantes;
 - [ ] confirmar ausência de cookies, analytics, pixels, formulários ou scripts externos;
