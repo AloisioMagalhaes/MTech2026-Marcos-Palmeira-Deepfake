@@ -20,7 +20,8 @@ S=[
 ('CONCLUSÃO','Aprendizados principais',['Fato, evidência, inferência e hipótese precisam ser separados.','Imagem e voz podem ser reutilizadas para fabricar autoridade.','A resposta mais segura é confirmação independente antes de compartilhar ou pagar.'],'template-capa-002.png'),
 ('REFERÊNCIAS','Fontes utilizadas',['CNN BRASIL (2024). Marcos Palmeira: rosto do ator é usado com IA em golpe no Instagram.','MIRSKY; LEE (2021). The creation and detection of deepfakes. ACM Computing Surveys.','VACCARI; CHADWICK (2020). Deepfakes and disinformation. Social Media + Society.','BRASIL (2018). Lei Geral de Proteção de Dados. ANPD (2023). Guia orientativo. NIST (2023). AI Risk Management Framework.'],'template-icones-ilustracoes-107.png')]
 for i,(k,t,ps,img) in enumerate(S,1):
- im=Image.new('RGB',(1920,1080),(247,251,255));d=ImageDraw.Draw(im);d.rectangle((0,0,1920,18),fill=(47,128,237));d.rectangle((0,1062,1920,1080),fill=(246,195,68));a=Image.open(A/img).convert('RGBA');a.thumbnail((500,500));im.paste(a,(110,280),a);d.text((740,170),k,font=font(28,1),fill=(47,128,237));d.text((740,225),t,font=font(58,1),fill=(16,42,67));y=350
+ bg=Image.open(A/'template-capa-002.png').convert('RGB').resize((1920,1080))
+ im=bg.copy(); d=ImageDraw.Draw(im); d.rectangle((0,0,1920,18),fill=(47,128,237)); d.rectangle((0,1062,1920,1080),fill=(246,195,68)); d.rounded_rectangle((680,110,1850,1000),radius=28,fill=(247,251,255,238)); a=Image.open(A/img).convert('RGBA'); a.thumbnail((500,500)); im.paste(a,(110,280),a); d.text((740,170),k,font=font(28,1),fill=(47,128,237)); d.text((740,225),t,font=font(58,1),fill=(16,42,67)); y=350
  for p in ps:
   for line in textwrap.wrap(p,52):d.text((740,y),line,font=font(29),fill=(16,42,67));y+=43
   y+=20
